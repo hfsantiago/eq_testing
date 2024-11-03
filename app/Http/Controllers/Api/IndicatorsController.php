@@ -14,4 +14,48 @@ class IndicatorsController extends Controller
         $indicators = Indicator::all();
         return response()->json($indicators);
     }
+
+    public function show($id): JsonResponse
+    {
+        $indicator = Indicator::findOrFail($id);
+        return response()->json($indicator);
+    }
+
+    public function create(Request $request): JsonResponse
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'expected_value' => 'required|numeric',
+            'min_value' => 'required|numeric',
+            'max_value' => 'required|numeric',
+        ]);
+
+        $indicator = Indicator::create($validatedData);
+
+        return response()->json($indicator, 201);
+    }
+
+    public function update(Request $request, $id): JsonResponse
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'expected_value' => 'required|numeric',
+            'min_value' => 'required|numeric',
+            'max_value' => 'required|numeric',
+        ]);
+
+        $indicator = Indicator::findOrFail($id);
+        $indicator->update($validatedData);
+
+        return response()->json($indicator);
+    }
+
+    public function destroy($id): JsonResponse
+    {
+        $indicator = Indicator::findOrFail($id);
+        $indicator->delete();
+
+        return response()->json(['message' => 'Indicator deleted successfully']);
+    }
+
 }
