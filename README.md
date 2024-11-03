@@ -1,4 +1,4 @@
-# Indicator Web App. 🧡
+# Indicator Web App. [Backend] 🧡
 
   
 
@@ -18,10 +18,8 @@ Inicialmente es construida en el backend con **PHP-Laravel** 🐘
 
 ### Uso de Tecnologias. 🧑🏽‍💻
 
--  **Entorno de desarrollo Frontend creado con**: [Vite](https://es.vitejs.dev/).
-
 -  **Backend**: [Laravel](https://laravel.com/) + [XAMPP](https://www.apachefriends.org/es/index.html) .
-*Lenguaje: [PHP](https://www.php.net/docs.php)*
+-  *Lenguaje: [PHP](https://www.php.net/docs.php)*
   
   
 
