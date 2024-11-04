@@ -18,7 +18,8 @@ Inicialmente es construida en el backend con **PHP-Laravel** 🐘
 
 ### Uso de Tecnologias. 🧑🏽‍💻
 
--  **Backend**: [Laravel](https://laravel.com/) + [XAMPP](https://www.apachefriends.org/es/index.html) .
+-  **Backend**: [Laravel](https://laravel.com/)
+-  **Base de datos**: [MySQL](https://laravel.com/) + [XAMPP](https://www.apachefriends.org/es/index.html) .
 -  *Lenguaje: [PHP](https://www.php.net/docs.php)*
   
   
@@ -35,17 +36,20 @@ Inicialmente es construida en el backend con **PHP-Laravel** 🐘
 
 1. Abre una terminal local y clona el proyecto.
 
-`git clone https://github.com/hfsantiago/eq_testing.git `
+`git clone https://github.com/hfsantiago/eq_testing.git`
 
-  
 
-2. Accede a la raiz del proyecto desde la terminal e instala las dependencias.
+⚠️ NOTAS: 
+- *Antes de ejecutar, verificar tener instalada el paquete `laravel-tools` en caso contrario podria generar error 💣 al momento de ejecutar el proyeto en local*
 
-`npm install`
+- Asegpurese de que en el archivo .env esté bien configurada la base de datos. Por defecto está sqlite y debe aparecer así; 
 
-  
-
-NOTA: *Antes de ejecutar, verificar tener instalada el paquete `laravel-tools` en caso contrario podria generar error 💣 al momento de ejecutar el proyeto en local*
+`DB_CONNECTION=mysql`
+`DB_HOST=127.0.0.1`
+`DB_PORT=3306`
+`DB_DATABASE="eq_test"`
+`DB_USERNAME="root"`
+`DB_PASSWORD=""`
   
 
 ### Ejecucion Local del proyecto. 💻
