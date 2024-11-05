@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('measurements', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('indicator_id')->after('id');
+            $table->unsignedBigInteger('indicator_id');
             $table->foreign('indicator_id')->references('id')->on('indicators')->onDelete('cascade');
             $table->decimal('value', 10, 2);
             $table->date('date_value');

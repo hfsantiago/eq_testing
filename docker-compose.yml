@@ -1,0 +1,43 @@
+version: '2.17.2'
+
+services:
+  web:
+    tty: true
+    stdin_open: true
+    image: app-name:latest
+    build:
+      target: web
+      context: .
+      dockerfile: docker/Dockerfile
+    command: tail -f /dev/null
+    networks:
+      - eq
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/api
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_USER_NAME=root
+      - DATABASE_PASSWORD=password
+      - DATABASE_NAME=eq
+    working_dir: /api
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: docker/mysql
+      dockerfile: Dockerfile.mysql
+    networks:
+      - eq
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: eq
+
+
+networks:
+  eq:
+    driver: bridge
