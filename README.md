@@ -54,6 +54,18 @@ Inicialmente es construida en el backend con **PHP-Laravel** 🐘
 
 ### Ejecucion Local del proyecto. 💻
 
+
 1. Necesitas abrir una terminal de linea de comando, para desplegar el servidor localmente a través del siguiente comando: 
 
 `php artisan serve`
+
+
+## Docker 🐋 
+1. En las consola local de la carpeta raiz del proyecto ejecute el siguiente comando:
+
+  `docker compose up -d`
+  
+2. Una vez los contenedores estén arriba ingrese a la consola del proyecto en el **docker desktop** y ejecute los siguientes comandos 
+
+`php artisan migrate`
+`php artisan serve --host 0.0.0.0 --port 80`
