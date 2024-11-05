@@ -18,9 +18,10 @@ Inicialmente es construida en el backend con **PHP-Laravel** 🐘
 
 ### Uso de Tecnologias. 🧑🏽‍💻
 
--  **Backend**: [Laravel](https://laravel.com/)
--  **Base de datos**: [MySQL](https://laravel.com/) + [XAMPP](https://www.apachefriends.org/es/index.html) .
--  *Lenguaje: [PHP](https://www.php.net/docs.php)*
+-  **:Package manager**: [Composer]([https://laravel.com/](https://getcomposer.org/download/)) `v2.8.2` 
+-  **Backend**: [Laravel](https://laravel.com/) `v11.30.0` 
+-  **Base de datos**: [MySQL](https://laravel.com/) + [XAMPP](https://www.apachefriends.org/es/index.html). v 
+-  *Lenguaje: [PHP](https://www.php.net/docs.php)* `v8.2.12` 
   
   
 
